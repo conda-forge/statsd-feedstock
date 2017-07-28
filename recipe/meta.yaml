@@ -13,7 +13,7 @@ source:
   sha256: 3fa92bf0192af926f7a0d9be031fe3fd0fbaa1992d42cf2f07e68f76ac18288e
 
 build:
-  number: 0
+  number: 1
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -36,6 +36,10 @@ about:
   home: https://github.com/{{ gh_org }}/{{ gh_repo }}
   license: MIT
   summary: A Python client for statsd
+  license_file: LICENSE
+  docs_url: http://statsd.readthedocs.io
+  dev_url: https://github.com/{{ gh_org }}/{{ gh_repo }}
+  license_family: MIT
 
 extra:
   recipe-maintainers:
