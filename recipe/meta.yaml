@@ -36,6 +36,10 @@ about:
   home: https://github.com/{{ gh_org }}/{{ gh_repo }}
   license: MIT
   summary: A Python client for statsd
+  license_file: LICENSE
+  docs_url: http://statsd.readthedocs.io
+  dev_url: https://github.com/{{ gh_org }}/{{ gh_repo }}
+  license_family: MIT
 
 extra:
   recipe-maintainers:
