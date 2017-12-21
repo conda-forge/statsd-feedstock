@@ -1,19 +1,18 @@
-{% set version = "3.2.1" %}
-{% set gh_org = "jsocol" %}
-{% set gh_repo = "pystatsd" %}
-{% set pkg_name = "statsd" %}
+{% set version = "3.2.2" %}
+{% set name = "statsd" %}
+{% set sha256 = "84f2427ef7b8ffab28cdb717933f6889d248d710eee32b5eb79e3fdac0e374dd" %}
 
 package:
-  name: {{ pkg_name }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ pkg_name }}-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/s/{{ pkg_name }}/{{ pkg_name }}-{{ version }}.tar.gz
-  sha256: 3fa92bf0192af926f7a0d9be031fe3fd0fbaa1992d42cf2f07e68f76ac18288e
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -33,12 +32,12 @@ test:
     - python -m nose statsd
 
 about:
-  home: https://github.com/{{ gh_org }}/{{ gh_repo }}
+  home: https://github.com/jsocol/pystatsd
   license: MIT
   summary: A Python client for statsd
   license_file: LICENSE
-  docs_url: http://statsd.readthedocs.io
-  dev_url: https://github.com/{{ gh_org }}/{{ gh_repo }}
+  doc_url: http://statsd.readthedocs.io
+  dev_url: https://github.com/jsocol/pystatsd
   license_family: MIT
 
 extra:
