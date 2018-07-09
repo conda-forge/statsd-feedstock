@@ -14,14 +14,15 @@ Summary: A Python client for statsd
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/statsd-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/statsd-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/statsd-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/statsd-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/statsd-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/statsd-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/statsd-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/statsd-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/statsd/badges/version.svg)](https://anaconda.org/conda-forge/statsd)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/statsd/badges/downloads.svg)](https://anaconda.org/conda-forge/statsd)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-statsd-green.svg)](https://anaconda.org/conda-forge/statsd) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/statsd.svg)](https://anaconda.org/conda-forge/statsd) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/statsd.svg)](https://anaconda.org/conda-forge/statsd) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/statsd.svg)](https://anaconda.org/conda-forge/statsd) |
 
 Installing statsd
 =================
