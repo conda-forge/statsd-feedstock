@@ -1,6 +1,6 @@
-{% set version = "3.3.0" %}
+{% set version = "4.0.1" %}
 {% set name = "statsd" %}
-{% set sha256 = "e3e6db4c246f7c59003e51c9720a51a7f39a396541cb9b147ff4b14d15b5dd1f" %}
+{% set sha256 = "99763da81bfea8daf6b3d22d11aaccb01a8d0f52ea521daab37e758a4ca7d128" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
