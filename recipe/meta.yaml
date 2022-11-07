@@ -1,43 +1,43 @@
-{% set version = "3.3.0" %}
-{% set name = "statsd" %}
-{% set sha256 = "e3e6db4c246f7c59003e51c9720a51a7f39a396541cb9b147ff4b14d15b5dd1f" %}
+{% set version = "4.0.1" %}
 
 package:
-  name: {{ name }}
+  name: statsd
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/s/statsd/statsd-{{ version }}.tar.gz
+  sha256: 99763da81bfea8daf6b3d22d11aaccb01a8d0f52ea521daab37e758a4ca7d128
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - python >=3.7
 
 test:
   requires:
-    - nose
+    - nose2
     - python
     - mock
+    - pip
   commands:
-    - python -m nose statsd
+    - pip check
+    - nose2 statsd
 
 about:
   home: https://github.com/jsocol/pystatsd
+  license_family: MIT
   license: MIT
   summary: A Python client for statsd
   license_file: LICENSE
-  doc_url: http://statsd.readthedocs.io
+  doc_url: https://statsd.readthedocs.io
   dev_url: https://github.com/jsocol/pystatsd
-  license_family: MIT
 
 extra:
   recipe-maintainers:
