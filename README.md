@@ -11,7 +11,7 @@ Summary: A Python client for statsd
 
 Development: https://github.com/jsocol/pystatsd
 
-Documentation: http://statsd.readthedocs.io
+Documentation: https://statsd.readthedocs.io
 
 Current build status
 ====================
